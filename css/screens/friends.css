@@ -13,6 +13,7 @@
 }
 
 .friends-screen {
+  margin-top: 20px;
   padding: 0px var(--horizontal-space);
 }
 
@@ -27,4 +28,28 @@
   display: flex;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hidesplashscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  animation: hidesplashscreen 0.5s ease-in-out forwards;
+  animation-delay: 2s;
 }
